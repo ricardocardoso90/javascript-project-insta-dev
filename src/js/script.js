@@ -1,30 +1,29 @@
-const stories = document.querySelector('.stories');
-const storyLeft = document.querySelector('.story-left');
-const storyRight = document.querySelector('.story-right');
+const stories = document.querySelector(".stories");
+const storyLeft = document.querySelector(".story-left");
+const storyRight = document.querySelector(".story-right");
 
-
-storyLeft.addEventListener('click', () => {
+storyLeft.addEventListener("click", () => {
   stories.scrollTo({
     left: stories.scrollLeft - 150,
-    behavior: 'smooth'
-  })
+    behavior: "smooth",
+  });
 
   if (stories.scrollLeft === 0) {
-    storyLeft.style.display = "none"
+    storyLeft.style.display = "none";
   } else {
-    storyLeft.style.display = "flex"
-  }
+    storyLeft.style.display = "flex";
+  };
 });
 
-storyRight.addEventListener('click', () => {
+storyRight.addEventListener("click", () => {
   stories.scrollTo({
     left: stories.scrollLeft + 150,
-    behavior: 'smooth'
-  })
+    behavior: "smooth",
+  });
 
   if (stories.scrollLeft > 100) {
-    storyRight.style.display = "none"
+    storyRight.style.display = "none";
   } else {
-    storyRight.style.display = "flex"
-  }
+    storyRight.style.display = "flex";
+  };
 });
